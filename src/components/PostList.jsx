@@ -29,14 +29,15 @@ export const PostList = () => {
     }
 
     const handleSortAscAlbha = () => {
-        let sorted = [...filterPost].sort((a, b) => a.title - b.title)
+        let sorted = [...filterPost].sort((a, b) => a.title.localeCompare(b.title))
         setPosts(sorted)
     }
 
     const handleSortDscAlbha = () => {
-        let sorted = [...filterPost].sort((a, b) => b.title - a.title)
+        let sorted = [...filterPost].sort((a, b) => b.title.localeCompare(a.title))
         setPosts(sorted)
     }
+
 
 
 
